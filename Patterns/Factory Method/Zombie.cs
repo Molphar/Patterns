@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Patterns.Factory_Method
+namespace Patterns.FactoryMethod
 {
     class Zombie : Undead
     {
