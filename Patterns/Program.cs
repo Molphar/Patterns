@@ -1,5 +1,7 @@
-﻿//using Patterns.Strategy;
-//using Patterns.FactoryMethod;
+﻿using Patterns.Strategy;
+using Patterns.FactoryMethod;
+using Patterns.Builder;
+using Patterns.Builder.ConcreteBuilder;
 using Patterns.TemplateMethod;
 using System;
 using System.Collections.Generic;
@@ -21,8 +23,8 @@ namespace Patterns
             #endregion
 
             #region Factory Method
-            //Necromancer necromancer = new Necromancer( new RaiseSceleton(), new RaiseZombie());
-            //necromancer.Skills[0].Raise();
+            //Necromancer necromancer = new Necromancer();
+            //Undead undead = necromancer.RaiseUndead<Sceleton>();
             #endregion
 
             #region TamplateMethod
@@ -35,6 +37,20 @@ namespace Patterns
 
             wSmith.ForgeGear();
             Console.WriteLine("Weapon Ready!!!\n");
+
+            #endregion
+
+            #region Builder
+
+            //string player = "Me";
+            //string target = "Foe";
+            //string world = "sand";
+
+            //SpellDirector lol = new SpellDirector();
+            //SpellBuffBuilder builder = new SpellBuffBuilder(player, target, world);
+            //lol.Builder = builder;
+            //lol.BuildSpell();
+            //builder.GetSpell();
 
             #endregion
 

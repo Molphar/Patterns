@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Patterns.FactoryMethod
+﻿namespace Patterns.FactoryMethod
 {
     class Necromancer
     {
-        public List<IRaiseUndead> Skills { get; }
-
-        public Necromancer()
+        public Undead RaiseUndead<T>() where T : Undead
         {
-            Skills = new List<IRaiseUndead>();
+            T unded = default;
+            IRaiseUndead undeadFactory;
+
+            switch (unded)
+            {
+                case Sceleton _:
+                    undeadFactory = new RaiseSceleton();
+                    break;
+                case Zombie _:
+                    undeadFactory = new RaiseZombie();
+                    break;
+                default:
+                    undeadFactory = null;
+                    break;
+            }
+
+            return undeadFactory.Raise();
         }
-
-        public Necromancer(params IRaiseUndead[] skills)
-        {
-            Skills = new List<IRaiseUndead>(skills);
-        }
-
-
     }
 }
