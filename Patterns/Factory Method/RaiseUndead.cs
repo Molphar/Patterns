@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Patterns.Factory_Method
+namespace Patterns.FactoryMethod
 {
-    abstract class RaiseUndead
+    interface IRaiseUndead
     {
-        public abstract Undead Raise();
+        Undead Raise();
     }
 }

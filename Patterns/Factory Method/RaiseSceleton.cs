@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Patterns.Factory_Method
+namespace Patterns.FactoryMethod
 {
-    class RaiseSceleton : RaiseUndead
+    class RaiseSceleton : IRaiseUndead
     {
-        public override Undead Raise()
+        public Undead Raise()
         {
             return new Sceleton();
         }
