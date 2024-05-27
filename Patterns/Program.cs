@@ -1,5 +1,6 @@
 ﻿//using Patterns.Strategy;
-using Patterns.FactoryMethod;
+//using Patterns.FactoryMethod;
+using Patterns.TemplateMethod;
 using System;
 using System.Collections.Generic;
 
@@ -20,10 +21,22 @@ namespace Patterns
             #endregion
 
             #region Factory Method
-            Necromancer necromancer = new Necromancer( new RaiseSceleton(), new RaiseZombie());
-            necromancer.Skills[0].Raise();
+            //Necromancer necromancer = new Necromancer( new RaiseSceleton(), new RaiseZombie());
+            //necromancer.Skills[0].Raise();
             #endregion
 
+            #region TamplateMethod
+
+            ArmorSmith aSmith = new ArmorSmith();
+            WeaponSmith wSmith = new WeaponSmith();
+
+            aSmith.ForgeGear();
+            Console.WriteLine("Armor Ready!!!\n");
+
+            wSmith.ForgeGear();
+            Console.WriteLine("Weapon Ready!!!\n");
+
+            #endregion
 
             Console.ReadLine();
         }

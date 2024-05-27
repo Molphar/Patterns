@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Patterns.Template_Method
+namespace Patterns.TemplateMethod
 {
     class WeaponSmith : GearCreate
     {
-        public override void CreateGear()
+        public override void PrepereMaterials()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Mining steel and choping the wood");
         }
 
-        public override void ForgingMaterial()
+        public override void ForgingMaterials()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sharping iron and making handle");
         }
 
-        public override void PrepereMaterial()
+        public override void CombineMaterials()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Making the blade");
         }
     }
 }

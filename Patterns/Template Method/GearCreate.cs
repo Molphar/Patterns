@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Patterns.Template_Method
+namespace Patterns.TemplateMethod
 {
     abstract class GearCreate
     {
         public virtual void ForgeGear()
         {
-            PrepereMaterial();
-            ForgingMaterial();
-            CreateGear();
+            PrepereMaterials();
+            ForgingMaterials();
+            CombineMaterials();
         }
 
-        public abstract void PrepereMaterial();
-        public abstract void ForgingMaterial();
-        public abstract void CreateGear();
+        public abstract void PrepereMaterials();
+        public abstract void ForgingMaterials();
+        public abstract void CombineMaterials();
     }
 }
