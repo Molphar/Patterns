@@ -1,6 +1,7 @@
 ﻿namespace Patterns.FactoryMethod
 {
-    class Sceleton : Undead
+    interface IRaiseUndead
     {
+        Undead Raise();
     }
 }

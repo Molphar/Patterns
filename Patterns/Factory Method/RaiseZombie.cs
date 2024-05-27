@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Patterns.FactoryMethod
+﻿namespace Patterns.FactoryMethod
 {
     class RaiseZombie : IRaiseUndead
     {
